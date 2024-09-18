@@ -12,3 +12,6 @@
  
  })
 
+ //Definir a porta onde vai estar o acesso do localhost para buscar no navegador por exemplo:
+ //http://localhost:3000/usuarios
+ app.listen(3000)
