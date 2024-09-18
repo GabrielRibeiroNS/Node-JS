@@ -6,13 +6,17 @@
 
  const app = express()
 
+ //Para as informações via JSON chegarem teremos que chamar essa função do Express
+ app.use(express.json())
+
+
  const users = []
 
  app.post('/usuarios', (req , res) => {
 
     console.log(req)
 
-    res.send('ok. aqui deu certo')
+    res.send('ok. aqui deu certo!')
 
  })
 
