@@ -30,6 +30,10 @@
 
  })
 
+            //STATUS 2XX = SUCESSO
+            //STATUS 4XX = ERRO DO LADO DO CLIENTE  EX: 404 NOT FOUND / PAGINA REQUISITADA PELO CLIENTE NÃO EXISTE
+            //STATUS 5XX = ERRO DO LADO DO SERVIDOR
+
             //req = requisição / res = resposta
 
  //Essa Função mostra as informações via Method GET registradas na Const USERS e mostra o Status se deu certo ou não.         
