@@ -19,10 +19,10 @@
  app.post('/usuarios', (req , res) => {
 
     //console.log(req.body)
-    //Pega as informações do vody do JSON e trás para a variavel users via Method Push
+    //Pega as informações do body do JSON e trás para a variavel users via Method Push
     users.push(req.body)
 
-    users.status(201).json(req.body)
+    res.status(201).json(req.body)
     //Status 201 = Deu tudo certo e Foi criado oque foi pedido para Criar
 
     //res.send('ok. aqui deu certo!')
