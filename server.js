@@ -6,6 +6,10 @@
 
  const app = express()
 
+ //Definir a porta onde vai estar o acesso do localhost para buscar no navegador por exemplo:
+ //http://localhost:3000/usuarios
+ app.listen(3000)
+
  //Para as informações via JSON chegarem teremos que chamar essa função do Express
  app.use(express.json())
 
@@ -24,13 +28,13 @@
 
 //req = requisição / res = resposta
  app.get('/usuarios', (req, res) => {
-    res.send('Legal, deu certo a resposta!')
+    //res.send('Legal, deu certo a resposta!')
+
+    //Manda a Resposta em formato JSON da variavel Users
+    res.json(users)
  
  })
 
- //Definir a porta onde vai estar o acesso do localhost para buscar no navegador por exemplo:
- //http://localhost:3000/usuarios
- app.listen(3000)
 
 
  /*
