@@ -30,7 +30,9 @@
 
  })
 
-//req = requisição / res = resposta
+            //req = requisição / res = resposta
+
+ //Essa Função mostra as informações via Method GET registradas na Const USERS e mostra o Status se deu certo ou não.         
  app.get('/usuarios', (req, res) => {
     //res.send('Legal, deu certo a resposta!')
 
