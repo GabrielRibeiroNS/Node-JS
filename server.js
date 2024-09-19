@@ -16,6 +16,7 @@
  //Users vai receber as informações do usuários via JSON
  const users = []
 
+ //Essa função Registra as informações que vem via JSON na Const USERS através do PUSH que puxa essas informações e damos uma resposta mostrando o Status e mostrando as informações.
  app.post('/usuarios', (req , res) => {
 
     //console.log(req.body)
