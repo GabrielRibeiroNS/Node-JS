@@ -9,12 +9,14 @@
  //Para as informações via JSON chegarem teremos que chamar essa função do Express
  app.use(express.json())
 
-
+ //Users vai receber as informações do usuários via JSON
  const users = []
 
  app.post('/usuarios', (req , res) => {
 
-    console.log(req)
+    //console.log(req.body)
+    //Pega as informações do vody do JSON e trás para a variavel users via Method Push
+    users.push(req.body)
 
     res.send('ok. aqui deu certo!')
 
