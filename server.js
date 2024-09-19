@@ -22,7 +22,10 @@
     //Pega as informações do vody do JSON e trás para a variavel users via Method Push
     users.push(req.body)
 
-    res.send('ok. aqui deu certo!')
+    users.status(201).json(req.body)
+    //Status 201 = Deu tudo certo e Foi criado oque foi pedido para Criar
+
+    //res.send('ok. aqui deu certo!')
 
  })
 
@@ -31,8 +34,9 @@
     //res.send('Legal, deu certo a resposta!')
 
     //Manda a Resposta em formato JSON da variavel Users
-    res.json(users)
- 
+    res.status(200).json(users)
+    //Status 200 = Tudo OK
+    
  })
 
 
