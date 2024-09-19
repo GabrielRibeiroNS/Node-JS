@@ -50,5 +50,6 @@
     -Deletar um usuário
 
     Edited Gabriel Ribeiro
+    Hoje Vou criar minha conta no MongoDB Para as informações do JSON serem mandadas para lá e perssistirem la, pois ao recareegar a pagina e o servidor elas se perdem.
 
  */
