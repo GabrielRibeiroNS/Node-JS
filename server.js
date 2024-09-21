@@ -61,5 +61,6 @@
 
      Edited Gabriel Ribeiro 2
      _nao criei ainda a conta no Mondo DB
+     PRa fazer a Rota de Delete e de Editar os Usuários, vamos usar um banco de Dados pois será profissional dessa forma.
 
  */
