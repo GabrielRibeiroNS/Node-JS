@@ -35,8 +35,8 @@ const prisma = new PrismaClient()
    //await para requisições assincronas a função precisa ser assincrona na definiçãod ela
     await prisma.user.create({
       data: {
-         nome: req.body.nome,
-         email: req.body.nome,
+         email: req.body.email,
+         name: req.body.name,
          age: req.body.age
       }
    })
