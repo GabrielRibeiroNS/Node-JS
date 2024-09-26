@@ -1,8 +1,11 @@
  //Forma nova
  import express from 'express'
+ import { PrismaClient } from '@prisma/client'
 
 //Forma antiga de Importar o Express
 //const express = require('express')
+
+const prisma = new PrismaClient()
 
  const app = express()
 
@@ -17,7 +20,7 @@
  const users = []
 
  //Essa função Registra as informações que vem via JSON na Const USERS através do PUSH que puxa essas informações e damos uma resposta mostrando o Status e mostrando as informações.
- app.post('/usuarios', (req , res) => {
+ app.post('/usuarios', async (req , res) => {
 
     //console.log(req.body)
     //Pega as informações do body do JSON e trás para a variavel users via Method Push
@@ -27,6 +30,18 @@
     //Status 201 = Deu tudo certo e Foi criado oque foi pedido para Criar
 
     //res.send('ok. aqui deu certo!')
+
+   //Aqui estou mandando para dentro do Banco de Dados
+   //await para requisições assincronas a função precisa ser assincrona na definiçãod ela
+    await prisma.user.create({
+      data: {
+         nome: req.body.nome,
+         email: req.body.nome,
+         age: req.body.age
+      }
+   })
+
+
 
  })
 
