@@ -85,5 +85,5 @@ const prisma = new PrismaClient()
      npx prisma db push -- esse comando no terminal serve para avisar o banco de dados que já está tudo configurado
 
      npx prisma studio -- Interface aparece no navegador para mostrar informações do Banco de Dados
-     
+     asd
  */
