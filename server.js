@@ -86,4 +86,6 @@ const prisma = new PrismaClient()
 
      npx prisma studio -- Interface aparece no navegador para mostrar informações do Banco de Dados
      asd
+       devian
+     Hoje
  */
