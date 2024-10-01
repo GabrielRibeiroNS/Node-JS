@@ -42,10 +42,12 @@ app.post('/usuarios', async (req, res) => {
 
 
 //Essa Função mostra as informações via Method GET registradas na Const USERS e mostra o Status se deu certo ou não.         
-app.get('/usuarios', (req, res) => {
+app.get('/usuarios', async (req, res) => {
    
    res.status(200).json(users)
    
+   const users = await prisma.user.findMany()
+   //Acima ela vai puxar os dados do banco de dados através do findMany e mostrar via method GET
    //Manda a Resposta em formato JSON da variavel Users
    //Status 200 = Tudo OK
    //res.send('Legal, deu certo a resposta!')
