@@ -1,9 +1,9 @@
-//Forma nova
+//const express = require('express')
+//Forma antiga de Importar o Express
+//Forma nova ABAIXO
 import express from 'express'
 import { PrismaClient } from '@prisma/client'
 
-//Forma antiga de Importar o Express
-//const express = require('express')
 
 const prisma = new PrismaClient()
 
@@ -47,12 +47,12 @@ app.post('/usuarios', async (req, res) => {
 
 //Essa Função mostra as informações via Method GET registradas na Const USERS e mostra o Status se deu certo ou não.         
 app.get('/usuarios', (req, res) => {
-   //res.send('Legal, deu certo a resposta!')
-
-   //Manda a Resposta em formato JSON da variavel Users
+   
    res.status(200).json(users)
+   
+   //Manda a Resposta em formato JSON da variavel Users
    //Status 200 = Tudo OK
-
+   //res.send('Legal, deu certo a resposta!')
 })
 
 
