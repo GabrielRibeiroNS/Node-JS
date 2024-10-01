@@ -12,6 +12,8 @@ const app = express()
 //http://localhost:3000/usuarios
 app.listen(3000)
 
+const users = []
+
 //Para as informações via JSON chegarem teremos que chamar essa função do Express
 app.use(express.json())
 
@@ -39,14 +41,12 @@ app.post('/usuarios', async (req, res) => {
 
 })
 
-
-
 //Essa Função mostra as informações via Method GET registradas na Const USERS e mostra o Status se deu certo ou não.         
 app.get('/usuarios', async (req, res) => {
    
-   res.status(200).json(users)
-   
    const users = await prisma.user.findMany()
+
+   res.status(200).json(users)
    //Acima ela vai puxar os dados do banco de dados através do findMany e mostrar via method GET
    //Manda a Resposta em formato JSON da variavel Users
    //Status 200 = Tudo OK
