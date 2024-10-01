@@ -15,9 +15,6 @@ app.listen(3000)
 //Para as informações via JSON chegarem teremos que chamar essa função do Express
 app.use(express.json())
 
-//Users vai receber as informações do usuários via JSON
-const users = []
-
 //Essa função Registra as informações que vem via JSON na Const USERS através do PUSH que puxa essas informações e damos uma resposta mostrando o Status e mostrando as informações.
 //Essa função cria os Usários no Banco de Dados
 app.post('/usuarios', async (req, res) => {
